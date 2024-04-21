@@ -16,7 +16,10 @@ public class DuplicatesWords
                 duplicateString.add(A);
             }
         }
-        System.out.println("Unique Words :\t"+duplicateString);
+        for(Character ch : duplicateString)
+        {
+            System.out.print(ch+" ");
+        }
 
     }
     public static void main(String[] args)

@@ -6,7 +6,6 @@ public class ReverseNumber
     {
         System.out.println("Actual number is :\t"+number);
         int rev = 0;
-        int sum;
         while(number!=0)
         {
             rev = rev * 10 + number % 10;

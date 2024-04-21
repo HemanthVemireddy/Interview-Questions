@@ -7,34 +7,24 @@ public class Practice
 
     public static void main(String[] args)
     {
-        Practice p = new Practice();
-        p.Anagram("pac","cap");
+
+        Test("AABBCCDDDEEEFFFGGGGGG");
     }
 
-    public static void Anagram(String s1, String s2)
+    public static void Test(String num)
     {
-        String str1 = s1.toLowerCase();
-        String str2 = s2.toLowerCase();
-        if (str1.length()!=str2.length())
+        if (num == null)
         {
-            System.out.println("Both are Not Equal So Not a anagram Number !!");
+            System.out.println("Null");
         }
-        else
+
+        char[] tochar = num.toCharArray();
+
+        for (int i =0 ; i < num.length(); i++)
         {
-            char[] tocharstr1 = str1.toCharArray();
-            char[] tocharstr2 = str2.toCharArray();
-
-            Arrays.sort(tocharstr1);
-            Arrays.sort(tocharstr2);
-
-
-            if(Arrays.equals(tocharstr1,tocharstr2)==true)
+            if (tochar[i] >= 'A' && tochar[i] <= 'Z')
             {
-                System.out.println("Given String is Anagram ");
-            }
-            else
-            {
-                System.out.println("Faill ....");
+                tochar[i] = (char) (tochar[i] + ('a' - 'A'));
             }
         }
     }

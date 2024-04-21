@@ -25,7 +25,10 @@ public class OccquranceOfWords
                 hash.put(c,1);
             }
         }
-        System.out.println("Count of Character :\t"+hash.toString());
+        for (Map.Entry<Character,Integer> entry : hash.entrySet())
+        {
+            System.out.println(entry.getKey() +" "+ entry.getValue());
+        }
     }
 
     public static void CountString(String name)
@@ -44,7 +47,11 @@ public class OccquranceOfWords
                 xcv.put(b, 1);
             }
         }
-        System.out.println(name+" "+xcv);
+
+        for (Map.Entry<String,Integer> entry : xcv.entrySet())
+        {
+            System.out.println(entry.getKey() +" "+ entry.getValue());
+        }
     }
     public static void main(String[] args)
     {
