@@ -1,6 +1,9 @@
 package Strings;
 
 import java.util.HashMap;
+import java.util.Map;
+
+import static java.util.Map.*;
 
 public class CountOccurenceOfCharacterInString {
 
@@ -22,6 +25,13 @@ public class CountOccurenceOfCharacterInString {
                 charcountMap.put(character,1);
             }
         }
-        System.out.println(charcountMap);
+        for (Map.Entry<Character,Integer> hashtable:charcountMap.entrySet())
+        {
+            if (hashtable.getValue() > 1)
+            {
+                System.out.println(hashtable.getKey()+" = "+hashtable.getValue());
+            }
+        }
+
     }
 }

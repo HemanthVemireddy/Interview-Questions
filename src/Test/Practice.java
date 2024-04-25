@@ -8,23 +8,30 @@ public class Practice
     public static void main(String[] args)
     {
 
-        Test("AABBCCDDDEEEFFFGGGGGG");
+        Test("Hemanth");
     }
 
-    public static void Test(String num)
+    public static void Test(String name)
     {
-        if (num == null)
+        char[] convertchar = name.toCharArray();
+        HashMap<Character,Integer>hashMap = new HashMap<Character,Integer>();
+        for (char c : convertchar)
         {
-            System.out.println("Null");
+            if (hashMap.containsKey(c))
+            {
+                hashMap.put(c, hashMap.get(c)+1);
+            }
+            else
+            {
+                hashMap.put(c,1);
+            }
         }
 
-        char[] tochar = num.toCharArray();
-
-        for (int i =0 ; i < num.length(); i++)
+        for (Map.Entry<Character,Integer> hash: hashMap.entrySet())
         {
-            if (tochar[i] >= 'A' && tochar[i] <= 'Z')
+            if (hash.getValue() > 0)
             {
-                tochar[i] = (char) (tochar[i] + ('a' - 'A'));
+
             }
         }
     }
