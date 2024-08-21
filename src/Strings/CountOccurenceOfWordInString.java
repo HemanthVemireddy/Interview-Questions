@@ -13,7 +13,8 @@ public class CountOccurenceOfWordInString {
         HashMap<String,Integer> countOccurence=new HashMap<>();
 
         for(String singleWord:eachWord){
-            if(countOccurence.containsKey(singleWord)){
+            if(countOccurence.containsKey(singleWord))
+            {
                 countOccurence.put(singleWord,countOccurence.get(singleWord)+1);
             }
             else{

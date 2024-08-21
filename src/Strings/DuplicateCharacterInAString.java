@@ -20,10 +20,11 @@ public class DuplicateCharacterInAString {
             }
         }
 
-        for (Map.Entry<Character, Integer> entry :
-                occurence.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : occurence.entrySet())
+        {
 
-            if (entry.getValue() == 1) {
+            if (entry.getValue() == 1)
+            {
                 System.out.println(entry.getKey()
                         + " : "+
                         entry.getValue());

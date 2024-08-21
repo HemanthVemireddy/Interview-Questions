@@ -3,15 +3,13 @@ package Strings;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.util.Map.*;
-
 public class CountOccurenceOfCharacterInString {
 
     public static void main(String [] args){
         String s="aabbcc";
         char[] EverySinglecharfromWord=s.toCharArray(); //Coverts the string to individual character
 
-        HashMap<Character,Integer> charcountMap=new HashMap<>();
+        Map<Character,Integer> charcountMap=new HashMap<>();
 
         //EverySingleCharacter from word is stored to character in forEachLoop
         for(char character:EverySinglecharfromWord)

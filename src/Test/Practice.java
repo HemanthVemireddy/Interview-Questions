@@ -7,32 +7,39 @@ public class Practice
 
     public static void main(String[] args)
     {
-
-        Test("Hemanth");
+        Test();
     }
 
-    public static void Test(String name)
+    public static void Test()
     {
-        char[] convertchar = name.toCharArray();
-        HashMap<Character,Integer>hashMap = new HashMap<Character,Integer>();
-        for (char c : convertchar)
-        {
-            if (hashMap.containsKey(c))
-            {
-                hashMap.put(c, hashMap.get(c)+1);
-            }
-            else
-            {
-                hashMap.put(c,1);
-            }
-        }
+      Scanner sc = new Scanner(System.in);
 
-        for (Map.Entry<Character,Integer> hash: hashMap.entrySet())
-        {
-            if (hash.getValue() > 0)
-            {
+      String First = sc.next();
+      String Secound = sc.next();
 
-            }
-        }
+      System.out.println("First String is : "+First);
+      System.out.println("Secound String is : "+Secound);
+
+      if (First.length()!= Secound.length())
+      {
+          System.out.println("Both Strings length are not Equal");
+      }
+      else
+      {
+          char[] firstTochar = First.toCharArray();
+          char[] SecoundToChar = Secound.toCharArray();
+
+          Arrays.sort(firstTochar);
+          Arrays.sort(SecoundToChar);
+
+          if (Arrays.equals(firstTochar,SecoundToChar)== true)
+          {
+              System.out.println("Both are Equal so Both Strings are Anagram");
+          }
+          else
+          {
+              System.out.println("Both are Not Anagram");
+          }
+      }
     }
 }
