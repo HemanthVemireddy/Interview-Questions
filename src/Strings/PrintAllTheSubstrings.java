@@ -6,7 +6,7 @@ public class PrintAllTheSubstrings
     public static void main (String [] args)
 
     {
-        String str = "one";
+        String str = "Prraavveenn";
         printSubstrings(str);
     }
 

@@ -12,34 +12,21 @@ public class Practice
 
     public static void Test()
     {
-      Scanner sc = new Scanner(System.in);
+        System.out.println("Entear an Array");
+        int[] array = {1,2,3,2,3,5,7,9,4};
+        int[] temp = new int[0];
+        int length = array.length;
+        
+        for (int i = 0; i <length-1; i++)
+        {
+            if (array[i] != array[i+1])
+            {
 
-      String First = sc.next();
-      String Secound = sc.next();
 
-      System.out.println("First String is : "+First);
-      System.out.println("Secound String is : "+Secound);
 
-      if (First.length()!= Secound.length())
-      {
-          System.out.println("Both Strings length are not Equal");
-      }
-      else
-      {
-          char[] firstTochar = First.toCharArray();
-          char[] SecoundToChar = Secound.toCharArray();
+            }
+            System.out.println(temp);
+        }
 
-          Arrays.sort(firstTochar);
-          Arrays.sort(SecoundToChar);
-
-          if (Arrays.equals(firstTochar,SecoundToChar)== true)
-          {
-              System.out.println("Both are Equal so Both Strings are Anagram");
-          }
-          else
-          {
-              System.out.println("Both are Not Anagram");
-          }
-      }
     }
 }
