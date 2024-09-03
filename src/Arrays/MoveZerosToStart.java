@@ -18,7 +18,7 @@ public class MoveZerosToStart {
         int nonZeroIndex = n - 1;
 
         // Traverse the array in reverse and move non-zero elements to the end
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1   ; i >= 0; i--) {
             if (arr[i] != 0) {
                 // Swap non-zero element with the last zero or itself
                 int temp = arr[i];
