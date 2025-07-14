@@ -1,10 +1,20 @@
 package Strings;
 
-public class CountVowelsInAString {
+import java.util.Scanner;
 
-    public static void main(String[] args){
-        String s="Swathi";
-        s=s.toLowerCase();
+public class CountVowelsInAString
+{
+
+    public static void main(String[] args)
+    {
+        Logic1();
+    }
+    public static void Logic1()
+    {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a String ");
+       String s = sc.nextLine();
+       s=s.toLowerCase();
 
         int count=0;
         for(int i=0;i<s.length();i++){

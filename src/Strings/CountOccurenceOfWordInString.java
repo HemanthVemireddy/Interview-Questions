@@ -1,16 +1,17 @@
 package Strings;
-
 import java.util.HashMap;
 import java.util.Map;
+public class CountOccurenceOfWordInString
+{
 
-
-public class CountOccurenceOfWordInString {
-
-    public static void main(String[] args){
-
-
-
+    public static void main(String[] args)
+    {
         String s="Java-Program-Java-Program-Selenium";
+        Logic1(s);
+    }
+    public static void Logic1(String s)
+    {
+
         String[] eachWord=s.split("-");
 
         HashMap<String,Integer> countOccurence=new HashMap<>();
@@ -23,10 +24,10 @@ public class CountOccurenceOfWordInString {
                 countOccurence.put(singleWord,1);
             }
         }
-        System.out.println(countOccurence);
+        //System.out.println(countOccurence);
 
         for(Map.Entry<String,Integer> duplicateWords:countOccurence.entrySet()){
-            if(duplicateWords.getValue()>1){
+            if(duplicateWords.getValue()>=1){
                 System.out.println("Key is "+duplicateWords.getKey()+" Value "+duplicateWords.getValue());
             }
         }

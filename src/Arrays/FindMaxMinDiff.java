@@ -1,4 +1,4 @@
-package Arrays.ImpQuestions;
+package Arrays;
 
 public class FindMaxMinDiff {
 

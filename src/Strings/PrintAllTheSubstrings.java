@@ -1,6 +1,4 @@
 package Strings;
-
-
 public class PrintAllTheSubstrings
 {
     public static void main (String [] args)
